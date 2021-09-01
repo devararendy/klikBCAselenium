@@ -19,8 +19,8 @@ class MainLocators(object):
     SUBMENU_ACCOUNT_STATEMENT = (
         By.CSS_SELECTOR, "a[onclick*='accountstmt.do']")
     MENU_LOGOUT = (
-        By.CSS_SELECTOR, "a[href*='value(actions)=logout']")
-    MENU_BACK_TO_HOME = (By.CSS_SELECTOR, "a[href='menu_bar.jsp']")
+        By.CSS_SELECTOR, 'a[href="../authentication.do?value(actions)=logout"]')
+    MENU_BACK_TO_HOME = (By.CSS_SELECTOR, 'a[href="menu_bar.htm"]')
     MENU_TRANSACTION_HISTORY = (
         By.CSS_SELECTOR, "a[onclick*='value(actions)=history']")
 

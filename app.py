@@ -1,8 +1,10 @@
 from selenium import webdriver
 from page.login_page import LoginPage
 from config import USERID, PASSWORD
+from time import sleep
 
-driver = webdriver.Chrome()
+# put your chromedriver location
+driver = webdriver.Chrome(executable_path="./chromedriver.exe")
 
 login_page = LoginPage(driver)
 login_page.launchUrl("https://ibank.klikbca.com")
@@ -11,7 +13,9 @@ if login_page.verifyPage == False:
     exit(1)
 
 login_page.fillUserID(USERID)
+sleep(3)
 login_page.fillPassword(PASSWORD)
+sleep(3)
 main_page = login_page.clickLoginButton()
 if main_page.verifyPage() == False:
     print("Login failed? check your UserID/Password")

@@ -4,8 +4,9 @@ from selenium.common.exceptions import UnexpectedAlertPresentException, NoAlertP
 from page.balance_page import BalancePage
 from page.acct_statement_page import AccountStatementPage
 from page.trans_history_page import TransactionHistoryPage
-
-
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from time import sleep
 class MainPage(BasePage):
 
     def verifyPage(self):

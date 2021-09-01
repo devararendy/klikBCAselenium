@@ -1,3 +1,5 @@
 config.py
 .vscode/settings.json
 dump/
+__pycache__
+chromedriver.exe
